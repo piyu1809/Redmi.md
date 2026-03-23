@@ -764,15 +764,15 @@ graph TB
 
 ```mermaid
 erDiagram
-    USER ||--o{ ORDER : places
-    USER ||--o{ ADDRESS : has
-    USER ||--o{ REVIEW : writes
-    RIDER ||--o{ ORDER : accepts
-    RIDER ||--o{ EARNINGS : receives
-    ORDER ||--|| PAYMENT : requires
-    ORDER ||--|| COMMISSION : generates
-    ORDER ||--o{ TRACKING : has
-    PAYMENT ||--|| TRANSACTION : records
+    USER ||--o{ ORDER : "places"
+    USER ||--o{ ADDRESS : "has"
+    USER ||--o{ REVIEW : "writes"
+    RIDER ||--o{ ORDER : "accepts"
+    RIDER ||--o{ EARNINGS : "receives"
+    ORDER ||--|| PAYMENT : "requires"
+    ORDER ||--|| COMMISSION : "generates"
+    ORDER ||--o{ TRACKING : "has"
+    PAYMENT ||--|| TRANSACTION : "records"
     
     USER {
         int _id
