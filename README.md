@@ -1,38 +1,35 @@
 # UFast - Complete Parcel Delivery Platform
-## Professional Project Documentation
-
----
 
 ## TABLE OF CONTENTS
 
-| Sr. No. | Topic                          | Page No. |
-|--------|--------------------------------|----------|
-| 1      | Abstract                       | 1        |
-| 2      | Introduction                   | 2        |
-| 3      | Motivation                     | 3        |
-| 4      | Existing System Analysis       | 4        |
-| 5      | Problem Statement              | 5        |
-| 6      | Purpose/Objectives/Goals       | 6        |
-| 7      | System Requirements Analysis   | 7        |
-| 8      | Software & Hardware Requirements| 8       |
-| 9      | User Interface Diagram         | 9        |
-| 10     | Project Implementation         | 10       |
-| 11     | Admin Panel Screenshots        | 11       |
-| 12     | UML Diagrams                   | 12       |
-| 13     | Project Limitations            | 16       |
-| 14     | Conclusion                     | 17       |
-| 15     | Future Scope                   | 18       |
-| 16     | Bibliography / Reference       | 19       |
+| Topic |
+|-------|
+| Abstract |
+| Introduction |
+| Motivation |
+| Existing System Analysis |
+| Problem Statement |
+| Purpose/Objectives/Goals |
+| System Requirements Analysis |
+| Software & Hardware Requirements |
+| User Interface Diagram |
+| Project Implementation |
+| Admin Panel Screenshots |
+| UML Diagrams |
+| Project Limitations |
+| Conclusion |
+| Future Scope |
+| Bibliography / Reference |
 
 ---
 
-## 1. ABSTRACT
+## ABSTRACT
 
 UFast is a full-stack parcel delivery platform designed as a modern Indian logistics solution, similar to Porter and Dunzo. The system enables customers to request parcel delivery services and connects them with verified delivery riders. The platform consists of three main applications: a customer-facing mobile app, a rider delivery app, and a comprehensive admin panel. Built using Node.js, Express, MongoDB for the backend, Flutter for mobile applications, and React for the admin interface, UFast provides real-time order tracking, OTP-based authentication, live GPS tracking, and dynamic pricing. The system processes orders end-to-end, from customer request to delivery completion, with integrated payment processing and earnings management for riders.
 
 ---
 
-## 2. INTRODUCTION
+## INTRODUCTION
 
 UFast is a comprehensive software solution that bridges the gap between customers needing parcel delivery services and professional delivery riders. In today's fast-paced urban environment, there is a growing need for reliable, quick, and transparent parcel delivery services. UFast addresses this need by providing a unified platform where:
 
@@ -44,7 +41,7 @@ The platform leverages modern technologies including Node.js for server-side ope
 
 ---
 
-## 3. MOTIVATION
+## MOTIVATION
 
 The motivation behind developing UFast stems from several key observations:
 
@@ -62,7 +59,7 @@ The motivation behind developing UFast stems from several key observations:
 
 ---
 
-## 4. EXISTING SYSTEM ANALYSIS
+## EXISTING SYSTEM ANALYSIS
 
 ### Current Market Solutions
 
@@ -91,7 +88,7 @@ UFast builds upon existing concepts but optimizes for:
 
 ---
 
-## 5. PROBLEM STATEMENT
+## PROBLEM STATEMENT
 
 ### Primary Problems Addressed
 
@@ -113,7 +110,7 @@ Manual, call-based delivery systems lack:
 
 ---
 
-## 6. PURPOSE/OBJECTIVES/GOALS
+## PURPOSE/OBJECTIVES/GOALS
 
 ### Primary Objectives
 
@@ -146,7 +143,7 @@ Manual, call-based delivery systems lack:
 
 ---
 
-## 7. SYSTEM REQUIREMENTS ANALYSIS
+## SYSTEM REQUIREMENTS ANALYSIS
 
 ### Functional Requirements
 
@@ -210,7 +207,7 @@ Manual, call-based delivery systems lack:
 
 ---
 
-## 8. SOFTWARE & HARDWARE REQUIREMENTS
+## SOFTWARE & HARDWARE REQUIREMENTS
 
 ### Software Requirements
 
@@ -271,7 +268,7 @@ Manual, call-based delivery systems lack:
 
 ---
 
-## 9. USER INTERFACE DIAGRAM
+## USER INTERFACE DIAGRAM
 
 ### Application Flow Overview
 
@@ -350,7 +347,7 @@ Order Completed → Earnings Updated
 
 ---
 
-## 10. PROJECT IMPLEMENTATION
+## PROJECT IMPLEMENTATION
 
 ### Architecture Overview
 
@@ -496,154 +493,153 @@ POST   /payments/refund         → Process refund
 
 ---
 
-## 11. ADMIN PANEL SCREENSHOTS
+## ADMIN PANEL SCREENSHOTS
 
-### 11.1 Admin Login Screen
-**Details:** Secure login form for admin access using email and password.
+### Admin Login Screen
+**Details:** This is the first screen of the admin panel where the administrator logs in securely. The admin enters registered email and password credentials to authenticate identity. After verification, the system creates an authorized session and grants dashboard access. This screen protects all management modules from unauthorized users. The main task here is to sign in correctly before starting any operational activity.
 
 ![Admin Login Screen](assets/Screenshot%202026-03-23%20210043.png)
 
-### 11.2 Dashboard Overview
-**Details:** Displays key platform metrics like total orders, pending orders, users, active riders, and revenue.
+### Dashboard Overview
+**Details:** This page is the central overview area of the admin panel after login. It displays important platform metrics such as total orders, pending orders, total users, active riders, and revenue values. All summary cards are designed to help the admin quickly understand current platform performance. The admin uses this screen to identify what needs immediate attention. From here, the workflow continues to modules like orders, users, and payments.
 
 ![Dashboard Overview](assets/Screenshot%202026-03-23%20210258.png)
 
-### 11.3 Orders Management
-**Details:** Central table to search, filter, monitor, and export order records.
+### Orders Management
+**Details:** This section is used to monitor and control all delivery orders in one place. The admin can search orders, filter by status, refresh records, and review complete order information. Each row provides key data such as order ID, customer, rider, pickup-drop route, price, and status. The page supports tracking order progress and identifying unresolved cases. It also allows exporting order data for reporting and audit work.
 
 ![Orders Management](assets/Screenshot%202026-03-23%20210314.png)
 
-### 11.4 Users Management
-**Details:** Admin view for searching users and taking actions like status control.
+### Users Management
+**Details:** This page manages customer-side user accounts and their account status. The admin can search users using phone number or name and verify whether profiles are active. User listing helps review account history and registration timeline for monitoring. If suspicious activity is detected, the admin can take control actions such as restriction or banning. This screen is important for platform safety, trust, and user governance.
 
 ![Users Management](assets/Screenshot%202026-03-23%20210420.png)
 
-### 11.5 Payment Tracking
-**Details:** Revenue, commission, GST, and payout summary with payment-level records.
+### Payment Tracking
+**Details:** This page is dedicated to financial monitoring of the platform. It shows revenue summaries, commissions, GST components, rider payouts, and transaction-level details. The admin can apply filters by status and date range to inspect specific payment windows. This helps validate settlement accuracy and detect mismatches early. The module is mainly used for reconciliation, finance tracking, and report export.
 
 ![Payment Tracking](assets/Screenshot%202026-03-23%20210454.png)
 
-### 11.6 Live Map Monitoring
-**Details:** Real-time rider visibility screen for operational tracking on map.
+### Live Map Monitoring
+**Details:** This screen is used for live operational visibility of riders in the field. It helps the admin monitor online riders and understand current ground availability. Rider locations are updated in real time when map services and location feeds are active. The page supports dispatch awareness and service coverage decisions. It is mainly used during active operations for quick control and monitoring.
 
 ![Live Map Monitoring](assets/Screenshot%202026-03-23%20210512.png)
 
-### 11.7 Analytics Dashboard
-**Details:** Analytical charts and summary cards for order and revenue trends.
+### Analytics Dashboard
+**Details:** This page provides analytical insights for business and operational decisions. Charts and panels present trends such as daily revenue, daily orders, status distribution, and vehicle-wise contribution. The admin can review selected time periods to evaluate short-term and long-term performance. It helps identify demand changes, growth opportunities, and service bottlenecks. This section is primarily used for planning and performance improvement.
 
 ![Analytics Dashboard](assets/Screenshot%202026-03-23%20210522.png)
 
-### 11.8 Commission Settings
-**Details:** Configure base fare, per-km rate, commission, and GST by vehicle type.
+### Commission Settings
+**Details:** This section is used to configure fare and commission policies for each vehicle type. The admin can edit base fare, per-km rate, commission percentage, and GST values. These settings directly affect pricing calculations shown during order creation. Proper configuration ensures transparent charges for customers and accurate earnings for riders. The page is used whenever pricing strategy needs an update.
 
 ![Commission Settings](assets/Screenshot%202026-03-23%20210536.png)
 
-### 11.9 Surge Pricing Configuration
-**Details:** Set manual/automatic surge rules and multipliers for peak demand periods.
+### Surge Pricing Configuration
+**Details:** This page manages surge pricing during peak hours or high-demand situations. The admin sets multiplier values, reason text, and optional timing rules for automatic behavior. It supports both manual override and rule-based surge activation. These configurations ensure the platform responds dynamically to demand pressure. The module is used to balance demand, rider availability, and service efficiency.
 
 ![Surge Pricing Configuration](assets/Screenshot%202026-03-23%20210552.png)
 
-### 11.10 Support Chat Console
-**Details:** Interface to manage user/rider support conversations and resolution workflow.
+### Support Chat Console
+**Details:** This section handles support conversations between admin and platform users/riders. The admin can open chat threads, read issue messages, and send responses for resolution. Conversations are typically categorized by status such as open, resolved, or all. It helps maintain service quality through quick and organized communication. This page is used as the central support handling console.
 
 ![Support Chat Console](assets/Screenshot%202026-03-23%20210603.png)
 
-### 11.11 Push Notifications Center
-**Details:** Send targeted notifications and review notification history.
+### Push Notifications Center
+**Details:** This page is used to send broadcast notifications to users, riders, or selected groups. The admin selects the target audience, writes the notification title and message body, and may include an optional image link. After sending, the notification appears in history for tracking and review. It is commonly used for alerts, announcements, campaigns, and operational updates. This module improves communication speed across the platform.
 
 ![Push Notifications Center](assets/Screenshot%202026-03-23%20210613.png)
 
-### 11.12 Activity Log
-**Details:** Tracks important admin actions for audit and accountability.
+### Activity Log
+**Details:** This page maintains a chronological audit trail of major admin actions. It records who performed the action, what action was done, and when it happened. Admin can filter logs by action type to investigate specific events quickly. Typical entries include approvals, bans, and notification-related activities. The section is critical for accountability, troubleshooting, and compliance verification.
 
 ![Activity Log](assets/Screenshot%202026-03-23%20210632.png)
 
-### 11.13 Admin Management
-**Details:** Manage admin accounts, roles, permissions, and account status.
+### Admin Management
+**Details:** This page controls internal admin accounts and role-based permissions. The admin can review existing admin users, role types, status, and assigned access rights. It helps maintain proper governance by limiting access to authorized team members only. Edit and delete operations are available for account maintenance and security control. This section is essential for managing administrative hierarchy safely.
 
 ![Admin Management](assets/Screenshot%202026-03-23%20210647.png)
 
-### 11.14 Create Admin Modal
-**Details:** Form to create a new admin with role assignment and permission selection.
+### Create Admin Modal
+**Details:** This popup form is used to add a new admin account from the Admin Management section. The creator enters full name, email, password, role, and selects module permissions. After submission, the system validates details and creates the account with mapped access rights. This flow helps onboard staff admins without giving unnecessary permissions. It ensures secure and structured expansion of the admin team.
 
 ![Create Admin Modal](assets/Screenshot%202026-03-23%20210711.png)
 
 ---
 
-## 12. UML DIAGRAMS
+## UML DIAGRAMS
 
-### 12.1 Use Case Diagram
+### Use Case Diagram
 
 ```mermaid
-graph TB
-    subgraph Actors
-        Customer["👤 Customer"]
-        Rider["🏍️ Rider"]
-        Admin["👨‍💼 Admin"]
-        PaymentGW["💳 Payment Gateway"]
-        LocationAPI["📍 Location API"]
-    end
-    
+flowchart TD
     subgraph Customer_UseCases["Customer Use Cases"]
+        direction TB
+        Customer["👤 Customer"]
         UC1["Register/Login"]
         UC2["Create Order"]
         UC3["Track Order"]
         UC4["Make Payment"]
         UC5["Rate Rider"]
         UC6["View History"]
+        Customer --> UC1
+        Customer --> UC2
+        Customer --> UC3
+        Customer --> UC4
+        Customer --> UC5
+        Customer --> UC6
     end
-    
+
     subgraph Rider_UseCases["Rider Use Cases"]
+        direction TB
+        Rider["🏍️ Rider"]
         UC7["Register/Login"]
         UC8["Toggle Online Status"]
         UC9["Accept Order"]
         UC10["Navigate to Pickup"]
         UC11["Navigate to Delivery"]
         UC12["View Earnings"]
+        Rider --> UC7
+        Rider --> UC8
+        Rider --> UC9
+        Rider --> UC10
+        Rider --> UC11
+        Rider --> UC12
     end
-    
+
     subgraph Admin_UseCases["Admin Use Cases"]
+        direction TB
+        Admin["👨‍💼 Admin"]
         UC13["Manage Users"]
         UC14["Manage Riders"]
         UC15["View Analytics"]
         UC16["Set Pricing"]
         UC17["Process Refunds"]
         UC18["Generate Reports"]
+        Admin --> UC13
+        Admin --> UC14
+        Admin --> UC15
+        Admin --> UC16
+        Admin --> UC17
+        Admin --> UC18
     end
-    
-    Customer --> UC1
-    Customer --> UC2
-    Customer --> UC3
-    Customer --> UC4
-    Customer --> UC5
-    Customer --> UC6
-    
-    Rider --> UC7
-    Rider --> UC8
-    Rider --> UC9
-    Rider --> UC10
-    Rider --> UC11
-    Rider --> UC12
-    
-    Admin --> UC13
-    Admin --> UC14
-    Admin --> UC15
-    Admin --> UC16
-    Admin --> UC17
-    Admin --> UC18
-    
+
+    PaymentGW["💳 Payment Gateway"]
+    LocationAPI["📍 Location API"]
+
+    UC6 -.-> UC7
+    UC12 -.-> UC13
     UC4 -.-> PaymentGW
     UC3 -.-> LocationAPI
     UC10 -.-> LocationAPI
     UC11 -.-> LocationAPI
-    
-    style Actors fill:#e1f5ff
+
     style Customer_UseCases fill:#fff3e0
     style Rider_UseCases fill:#f3e5f5
     style Admin_UseCases fill:#e8f5e9
 ```
 
-### 12.2 Class Diagram
+### Class Diagram
 
 ```mermaid
 graph TB
@@ -668,7 +664,7 @@ graph TB
     style Models fill:#e3f2fd
 ```
 
-### 12.3 Sequence Diagram - Order Creation Flow
+### Sequence Diagram - Order Creation Flow
 
 ```mermaid
 sequenceDiagram
@@ -710,7 +706,7 @@ sequenceDiagram
     Backend-->>Rider: Update rider ratings
 ```
 
-### 12.4 Activity Diagram - Rider Delivery Process
+### Activity Diagram - Rider Delivery Process
 
 ```mermaid
 graph TD
@@ -769,7 +765,7 @@ graph TD
     style P fill:#ffeb3b
 ```
 
-### 12.5 Component Diagram
+### Component Diagram
 
 ```mermaid
 graph TB
@@ -835,7 +831,7 @@ graph TB
     style External fill:#fce4ec
 ```
 
-### 12.6 Entity-Relationship Diagram
+### Entity-Relationship Diagram
 
 ```mermaid
 erDiagram
@@ -939,7 +935,7 @@ erDiagram
 
 ---
 
-## 13. PROJECT LIMITATIONS
+## PROJECT LIMITATIONS
 
 ### Technical Limitations
 
@@ -1006,7 +1002,7 @@ erDiagram
 
 ---
 
-## 14. CONCLUSION
+## CONCLUSION
 
 UFast successfully demonstrates a modern, full-stack approach to building a scalable parcel delivery platform. By combining the power of Node.js on the backend, Flutter for mobile applications, and React for web administration, the system provides a comprehensive solution for customers, riders, and administrators.
 
@@ -1039,7 +1035,7 @@ The UFast platform demonstrates how modern web technologies can solve real-world
 
 ---
 
-## 15. FUTURE SCOPE
+## FUTURE SCOPE
 
 ### Short-Term Enhancements (3-6 Months)
 
@@ -1126,7 +1122,7 @@ The UFast platform demonstrates how modern web technologies can solve real-world
 
 ---
 
-## 16. BIBLIOGRAPHY / REFERENCES
+## BIBLIOGRAPHY / REFERENCES
 
 ### Technical Documentation
 
