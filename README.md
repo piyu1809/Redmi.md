@@ -1278,13 +1278,3 @@ DEV_OTP=123456
 **Details:** Form to create a new admin with role assignment and permission selection.
 
 ![Create Admin Modal](assets/Screenshot%202026-03-23%20210711.png)
-
----
-
-**Document Generated**: 2026-03-23
-**Version**: 1.0
-**Status**: Complete & Ready for Submission
-
----
-
-*This documentation is designed for academic and professional purposes and represents a comprehensive guide to the UFast Parcel Delivery Platform.*
