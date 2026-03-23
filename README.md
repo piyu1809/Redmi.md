@@ -1207,6 +1207,78 @@ TWILIO_PHONE_NUMBER=+1234567890
 DEV_OTP=123456
 ```
 
+### Admin Panel Screenshots (With Short Details)
+
+#### 1) Admin Login Screen
+**Details:** Secure login form for admin access using email and password.
+
+![Admin Login Screen](assets/Screenshot%202026-03-23%20210043.png)
+
+#### 2) Dashboard Overview
+**Details:** Displays key platform metrics like total orders, pending orders, users, active riders, and revenue.
+
+![Dashboard Overview](assets/Screenshot%202026-03-23%20210258.png)
+
+#### 3) Orders Management
+**Details:** Central table to search, filter, monitor, and export order records.
+
+![Orders Management](assets/Screenshot%202026-03-23%20210314.png)
+
+#### 4) Users Management
+**Details:** Admin view for searching users and taking actions like status control.
+
+![Users Management](assets/Screenshot%202026-03-23%20210420.png)
+
+#### 5) Payment Tracking
+**Details:** Revenue, commission, GST, and payout summary with payment-level records.
+
+![Payment Tracking](assets/Screenshot%202026-03-23%20210454.png)
+
+#### 6) Live Map Monitoring
+**Details:** Real-time rider visibility screen for operational tracking on map.
+
+![Live Map Monitoring](assets/Screenshot%202026-03-23%20210512.png)
+
+#### 7) Analytics Dashboard
+**Details:** Analytical charts and summary cards for order and revenue trends.
+
+![Analytics Dashboard](assets/Screenshot%202026-03-23%20210522.png)
+
+#### 8) Commission Settings
+**Details:** Configure base fare, per-km rate, commission, and GST by vehicle type.
+
+![Commission Settings](assets/Screenshot%202026-03-23%20210536.png)
+
+#### 9) Surge Pricing Configuration
+**Details:** Set manual/automatic surge rules and multipliers for peak demand periods.
+
+![Surge Pricing Configuration](assets/Screenshot%202026-03-23%20210552.png)
+
+#### 10) Support Chat Console
+**Details:** Interface to manage user/rider support conversations and resolution workflow.
+
+![Support Chat Console](assets/Screenshot%202026-03-23%20210603.png)
+
+#### 11) Push Notifications Center
+**Details:** Send targeted notifications and review notification history.
+
+![Push Notifications Center](assets/Screenshot%202026-03-23%20210613.png)
+
+#### 12) Activity Log
+**Details:** Tracks important admin actions for audit and accountability.
+
+![Activity Log](assets/Screenshot%202026-03-23%20210632.png)
+
+#### 13) Admin Management
+**Details:** Manage admin accounts, roles, permissions, and account status.
+
+![Admin Management](assets/Screenshot%202026-03-23%20210647.png)
+
+#### 14) Create Admin Modal
+**Details:** Form to create a new admin with role assignment and permission selection.
+
+![Create Admin Modal](assets/Screenshot%202026-03-23%20210711.png)
+
 ---
 
 **Document Generated**: 2026-03-23
