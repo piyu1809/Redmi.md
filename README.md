@@ -584,11 +584,11 @@ graph TB
         Commission["<b>Commission</b><br/>---<br/>- _id: ObjectId<br/>- orderId: Ref(Order)<br/>- riderEarnings: Number<br/>- platformCommission: Number<br/>- paymentStatus: String<br/>+ calculateCommission()<br/>+ markAsPaid()"]
     end
     
-    User --|"places"| Order
-    Rider --|"accepts"| Order
-    Order --|"has"| Payment
-    Order --|"generates"| Commission
-    Rider --|"receives"| Commission
+    User --|places| Order
+    Rider --|accepts| Order
+    Order --|has| Payment
+    Order --|generates| Commission
+    Rider --|receives| Commission
     
     style Models fill:#e3f2fd
 ```
