@@ -698,67 +698,60 @@ graph TD
 
 ```mermaid
 graph TB
-    subgraph Client["📱 Client Layer"]
-        CApp["Customer<br/>Mobile App<br/>(Flutter)"]
-        RApp["Rider<br/>Mobile App<br/>(Flutter)"]
-        Admin["Admin<br/>Web Panel<br/>(React)"]
+    subgraph Client["Client Layer"]
+        CApp["Customer Mobile App<br/>(Flutter)"]
+        RApp["Rider Mobile App<br/>(Flutter)"]
+        Admin["Admin Web Panel<br/>(React)"]
     end
     
-    subgraph Server["🖥️ Server Layer"]
+    subgraph Server["Server Layer"]
         API["Main API<br/>(Express.js)"]
         AdminAPI["Admin API<br/>(Express.js)"]
         WS["WebSocket Server<br/>(Socket.IO)"]
     end
     
-    subgraph Business["⚙️ Business Logic"]
-        Auth["Authentication<br/>Service"]
-        Order["Order<br/>Service"]
-        Rider["Rider<br/>Service"]
-        Payment["Payment<br/>Service"]
-        Location["Location<br/>Service"]
-        Notification["Notification<br/>Service"]
+    subgraph Business["Business Logic"]
+        Auth["Authentication"]
+        Order["Order Service"]
+        RiderSvc["Rider Service"]
+        Payment["Payment Service"]
+        Location["Location Service"]
+        Notification["Notification"]
     end
     
-    subgraph Data["💾 Data Layer"]
-        MongoDB["MongoDB<br/>Database"]
+    subgraph Data["Data Layer"]
+        MongoDB["MongoDB Database"]
     end
     
-    subgraph External["🔗 External Services"]
-        PaymentGW["Payment<br/>Gateway"]
-        Twilio["Twilio<br/>SMS/OTP"]
-        GoogleMaps["Google Maps<br/>API"]
-        FCM["Firebase Cloud<br/>Messaging"]
+    subgraph External["External Services"]
+        PaymentGW["Payment Gateway"]
+        Twilio["Twilio SMS/OTP"]
+        GoogleMaps["Google Maps API"]
+        FCM["Firebase Cloud Messaging"]
     end
     
-    CApp -->|API Calls| API
-    RApp -->|API Calls| API
-    Admin -->|API Calls| AdminAPI
-    
+    CApp -->|API| API
+    RApp -->|API| API
+    Admin -->|API| AdminAPI
     CApp -->|WebSocket| WS
     RApp -->|WebSocket| WS
-    
     API --> Auth
     API --> Order
-    API --> Rider
+    API --> RiderSvc
     API --> Payment
     API --> Location
     API --> Notification
-    
     AdminAPI --> Auth
     AdminAPI --> Order
-    AdminAPI --> Rider
     AdminAPI --> Payment
-    
     Auth --> MongoDB
     Order --> MongoDB
-    Rider --> MongoDB
+    RiderSvc --> MongoDB
     Payment --> MongoDB
-    Location --> MongoDB
-    
-    Payment -.->|Process| PaymentGW
-    Auth -.->|Send OTP| Twilio
-    Location -.->|Get Route| GoogleMaps
-    Notification -.->|Push Notify| FCM
+    Payment --> PaymentGW
+    Auth --> Twilio
+    Location --> GoogleMaps
+    Notification --> FCM
     
     style Client fill:#fff3e0
     style Server fill:#e3f2fd
@@ -771,161 +764,101 @@ graph TB
 
 ```mermaid
 erDiagram
-    USER ||--o{ ORDER : "places"
-    USER ||--o{ ADDRESS : "has"
-    USER ||--o{ REVIEW : "writes"
-    
-    RIDER ||--o{ ORDER : "accepts"
-    RIDER ||--o{ LOCATION_UPDATE : "sends"
-    RIDER ||--o{ EARNINGS : "receives"
-    
-    ORDER ||--|| PAYMENT : "requires"
-    ORDER ||--|| COMMISSION : "generates"
-    ORDER ||--o{ TRACKING : "has"
-    
-    PAYMENT ||--|| TRANSACTION : "records"
-    
-    PARCEL_TYPE }o--|| ORDER : "defines"
-    VEHICLE_TYPE }o--|| ORDER : "uses"
+    USER ||--o{ ORDER : places
+    USER ||--o{ ADDRESS : has
+    USER ||--o{ REVIEW : writes
+    RIDER ||--o{ ORDER : accepts
+    RIDER ||--o{ EARNINGS : receives
+    ORDER ||--|| PAYMENT : requires
+    ORDER ||--|| COMMISSION : generates
+    ORDER ||--o{ TRACKING : has
+    PAYMENT ||--|| TRANSACTION : records
     
     USER {
-        ObjectId _id PK
+        int _id
         string name
-        string phone UK
+        string phone
         string email
-        string profilePicture
-        object otp
         boolean isVerified
-        boolean isActive
-        array addresses
         number totalOrders
         number totalSpent
-        string fcmToken
-        timestamp createdAt
-        timestamp updatedAt
     }
     
     RIDER {
-        ObjectId _id PK
+        int _id
         string name
-        string phone UK
+        string phone
         string email
-        string password
-        object otp
-        boolean isVerified
-        boolean isActive
         boolean isOnline
         string vehicleType
-        string vehicleNumber
-        string profilePicture
         number totalDeliveries
-        number ratings
         number totalEarnings
-        string fcmToken
-        timestamp createdAt
     }
     
     ORDER {
-        ObjectId _id PK
-        string orderId UK
-        ObjectId customer FK
-        ObjectId rider FK
-        object pickup
-        object drop
-        object parcel
+        int _id
+        string orderId
+        int customer
+        int rider
         string vehicleType
         number distance
-        object pricing
-        string paymentMethod
-        string paymentStatus
+        number totalAmount
         string orderStatus
-        timestamp createdAt
-        timestamp updatedAt
     }
     
     PAYMENT {
-        ObjectId _id PK
-        ObjectId orderId FK
-        ObjectId customer FK
+        int _id
+        int orderId
+        int customer
         number amount
         string paymentMethod
         string status
-        string transactionId
-        timestamp createdAt
     }
     
     COMMISSION {
-        ObjectId _id PK
-        ObjectId orderId FK
+        int _id
+        int orderId
         number riderEarnings
         number platformCommission
-        string paymentStatus
-        timestamp createdAt
     }
     
     ADDRESS {
-        ObjectId _id PK
-        ObjectId userId FK
-        string label
+        int _id
+        int userId
         string address
         number latitude
         number longitude
-        boolean isDefault
     }
     
     TRACKING {
-        ObjectId _id PK
-        ObjectId orderId FK
+        int _id
+        int orderId
         number latitude
         number longitude
         string status
-        timestamp timestamp
-    }
-    
-    LOCATION_UPDATE {
-        ObjectId _id PK
-        ObjectId riderId FK
-        number latitude
-        number longitude
-        timestamp timestamp
     }
     
     EARNINGS {
-        ObjectId _id PK
-        ObjectId riderId FK
+        int _id
+        int riderId
         number dailyEarnings
         number monthlyEarnings
-        number totalEarnings
-        timestamp date
     }
     
     REVIEW {
-        ObjectId _id PK
-        ObjectId orderId FK
-        ObjectId userId FK
-        ObjectId riderId FK
+        int _id
+        int orderId
+        int userId
+        int riderId
         number rating
         string comment
-        timestamp createdAt
-    }
-    
-    PARCEL_TYPE {
-        string type PK
-        string description
-    }
-    
-    VEHICLE_TYPE {
-        string type PK
-        number maxCapacity
-        number baseRate
     }
     
     TRANSACTION {
-        ObjectId _id PK
-        ObjectId paymentId FK
-        string externalTxnId
-        string gatewayResponse
-        timestamp timestamp
+        int _id
+        int paymentId
+        string transactionId
+        string status
     }
 ```
 
