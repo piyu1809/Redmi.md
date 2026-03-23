@@ -17,11 +17,12 @@
 | 8      | Software & Hardware Requirements| 8       |
 | 9      | User Interface Diagram         | 9        |
 | 10     | Project Implementation         | 10       |
-| 11     | UML Diagrams                  | 11       |
-| 12     | Project Limitations            | 15       |
-| 13     | Conclusion                     | 16       |
-| 14     | Future Scope                  | 17       |
-| 15     | Bibliography / Reference       | 18       |
+| 11     | Admin Panel Screenshots        | 11       |
+| 12     | UML Diagrams                   | 12       |
+| 13     | Project Limitations            | 16       |
+| 14     | Conclusion                     | 17       |
+| 15     | Future Scope                   | 18       |
+| 16     | Bibliography / Reference       | 19       |
 
 ---
 
@@ -495,9 +496,83 @@ POST   /payments/refund         → Process refund
 
 ---
 
-## 11. UML DIAGRAMS
+## 11. ADMIN PANEL SCREENSHOTS
 
-### 11.1 Use Case Diagram
+### 11.1 Admin Login Screen
+**Details:** Secure login form for admin access using email and password.
+
+![Admin Login Screen](assets/Screenshot%202026-03-23%20210043.png)
+
+### 11.2 Dashboard Overview
+**Details:** Displays key platform metrics like total orders, pending orders, users, active riders, and revenue.
+
+![Dashboard Overview](assets/Screenshot%202026-03-23%20210258.png)
+
+### 11.3 Orders Management
+**Details:** Central table to search, filter, monitor, and export order records.
+
+![Orders Management](assets/Screenshot%202026-03-23%20210314.png)
+
+### 11.4 Users Management
+**Details:** Admin view for searching users and taking actions like status control.
+
+![Users Management](assets/Screenshot%202026-03-23%20210420.png)
+
+### 11.5 Payment Tracking
+**Details:** Revenue, commission, GST, and payout summary with payment-level records.
+
+![Payment Tracking](assets/Screenshot%202026-03-23%20210454.png)
+
+### 11.6 Live Map Monitoring
+**Details:** Real-time rider visibility screen for operational tracking on map.
+
+![Live Map Monitoring](assets/Screenshot%202026-03-23%20210512.png)
+
+### 11.7 Analytics Dashboard
+**Details:** Analytical charts and summary cards for order and revenue trends.
+
+![Analytics Dashboard](assets/Screenshot%202026-03-23%20210522.png)
+
+### 11.8 Commission Settings
+**Details:** Configure base fare, per-km rate, commission, and GST by vehicle type.
+
+![Commission Settings](assets/Screenshot%202026-03-23%20210536.png)
+
+### 11.9 Surge Pricing Configuration
+**Details:** Set manual/automatic surge rules and multipliers for peak demand periods.
+
+![Surge Pricing Configuration](assets/Screenshot%202026-03-23%20210552.png)
+
+### 11.10 Support Chat Console
+**Details:** Interface to manage user/rider support conversations and resolution workflow.
+
+![Support Chat Console](assets/Screenshot%202026-03-23%20210603.png)
+
+### 11.11 Push Notifications Center
+**Details:** Send targeted notifications and review notification history.
+
+![Push Notifications Center](assets/Screenshot%202026-03-23%20210613.png)
+
+### 11.12 Activity Log
+**Details:** Tracks important admin actions for audit and accountability.
+
+![Activity Log](assets/Screenshot%202026-03-23%20210632.png)
+
+### 11.13 Admin Management
+**Details:** Manage admin accounts, roles, permissions, and account status.
+
+![Admin Management](assets/Screenshot%202026-03-23%20210647.png)
+
+### 11.14 Create Admin Modal
+**Details:** Form to create a new admin with role assignment and permission selection.
+
+![Create Admin Modal](assets/Screenshot%202026-03-23%20210711.png)
+
+---
+
+## 12. UML DIAGRAMS
+
+### 12.1 Use Case Diagram
 
 ```mermaid
 graph TB
@@ -568,7 +643,7 @@ graph TB
     style Admin_UseCases fill:#e8f5e9
 ```
 
-### 11.2 Class Diagram
+### 12.2 Class Diagram
 
 ```mermaid
 graph TB
@@ -593,7 +668,7 @@ graph TB
     style Models fill:#e3f2fd
 ```
 
-### 11.3 Sequence Diagram - Order Creation Flow
+### 12.3 Sequence Diagram - Order Creation Flow
 
 ```mermaid
 sequenceDiagram
@@ -635,7 +710,7 @@ sequenceDiagram
     Backend-->>Rider: Update rider ratings
 ```
 
-### 11.4 Activity Diagram - Rider Delivery Process
+### 12.4 Activity Diagram - Rider Delivery Process
 
 ```mermaid
 graph TD
@@ -694,7 +769,7 @@ graph TD
     style P fill:#ffeb3b
 ```
 
-### 11.5 Component Diagram
+### 12.5 Component Diagram
 
 ```mermaid
 graph TB
@@ -760,7 +835,7 @@ graph TB
     style External fill:#fce4ec
 ```
 
-### 11.6 Entity-Relationship Diagram
+### 12.6 Entity-Relationship Diagram
 
 ```mermaid
 erDiagram
@@ -864,7 +939,7 @@ erDiagram
 
 ---
 
-## 12. PROJECT LIMITATIONS
+## 13. PROJECT LIMITATIONS
 
 ### Technical Limitations
 
@@ -931,7 +1006,7 @@ erDiagram
 
 ---
 
-## 13. CONCLUSION
+## 14. CONCLUSION
 
 UFast successfully demonstrates a modern, full-stack approach to building a scalable parcel delivery platform. By combining the power of Node.js on the backend, Flutter for mobile applications, and React for web administration, the system provides a comprehensive solution for customers, riders, and administrators.
 
@@ -964,7 +1039,7 @@ The UFast platform demonstrates how modern web technologies can solve real-world
 
 ---
 
-## 14. FUTURE SCOPE
+## 15. FUTURE SCOPE
 
 ### Short-Term Enhancements (3-6 Months)
 
@@ -1051,7 +1126,7 @@ The UFast platform demonstrates how modern web technologies can solve real-world
 
 ---
 
-## 15. BIBLIOGRAPHY / REFERENCES
+## 16. BIBLIOGRAPHY / REFERENCES
 
 ### Technical Documentation
 
@@ -1206,75 +1281,3 @@ TWILIO_AUTH_TOKEN=your_token
 TWILIO_PHONE_NUMBER=+1234567890
 DEV_OTP=123456
 ```
-
-### Admin Panel Screenshots (With Short Details)
-
-#### 1) Admin Login Screen
-**Details:** Secure login form for admin access using email and password.
-
-![Admin Login Screen](assets/Screenshot%202026-03-23%20210043.png)
-
-#### 2) Dashboard Overview
-**Details:** Displays key platform metrics like total orders, pending orders, users, active riders, and revenue.
-
-![Dashboard Overview](assets/Screenshot%202026-03-23%20210258.png)
-
-#### 3) Orders Management
-**Details:** Central table to search, filter, monitor, and export order records.
-
-![Orders Management](assets/Screenshot%202026-03-23%20210314.png)
-
-#### 4) Users Management
-**Details:** Admin view for searching users and taking actions like status control.
-
-![Users Management](assets/Screenshot%202026-03-23%20210420.png)
-
-#### 5) Payment Tracking
-**Details:** Revenue, commission, GST, and payout summary with payment-level records.
-
-![Payment Tracking](assets/Screenshot%202026-03-23%20210454.png)
-
-#### 6) Live Map Monitoring
-**Details:** Real-time rider visibility screen for operational tracking on map.
-
-![Live Map Monitoring](assets/Screenshot%202026-03-23%20210512.png)
-
-#### 7) Analytics Dashboard
-**Details:** Analytical charts and summary cards for order and revenue trends.
-
-![Analytics Dashboard](assets/Screenshot%202026-03-23%20210522.png)
-
-#### 8) Commission Settings
-**Details:** Configure base fare, per-km rate, commission, and GST by vehicle type.
-
-![Commission Settings](assets/Screenshot%202026-03-23%20210536.png)
-
-#### 9) Surge Pricing Configuration
-**Details:** Set manual/automatic surge rules and multipliers for peak demand periods.
-
-![Surge Pricing Configuration](assets/Screenshot%202026-03-23%20210552.png)
-
-#### 10) Support Chat Console
-**Details:** Interface to manage user/rider support conversations and resolution workflow.
-
-![Support Chat Console](assets/Screenshot%202026-03-23%20210603.png)
-
-#### 11) Push Notifications Center
-**Details:** Send targeted notifications and review notification history.
-
-![Push Notifications Center](assets/Screenshot%202026-03-23%20210613.png)
-
-#### 12) Activity Log
-**Details:** Tracks important admin actions for audit and accountability.
-
-![Activity Log](assets/Screenshot%202026-03-23%20210632.png)
-
-#### 13) Admin Management
-**Details:** Manage admin accounts, roles, permissions, and account status.
-
-![Admin Management](assets/Screenshot%202026-03-23%20210647.png)
-
-#### 14) Create Admin Modal
-**Details:** Form to create a new admin with role assignment and permission selection.
-
-![Create Admin Modal](assets/Screenshot%202026-03-23%20210711.png)
