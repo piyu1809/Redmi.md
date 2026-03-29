@@ -1,4 +1,7 @@
 # UFast - Complete Parcel Delivery Platform
+## Professional Project Documentation
+
+---
 
 ## TABLE OF CONTENTS
 
@@ -15,6 +18,7 @@
 | User Interface Diagram |
 | Project Implementation |
 | Admin Panel Screenshots |
+| Rider App Screenshots |
 | UML Diagrams |
 | Project Limitations |
 | Conclusion |
@@ -564,6 +568,40 @@ POST   /payments/refund         → Process refund
 **Details:** This popup form is used to add a new admin account from the Admin Management section. The creator enters full name, email, password, role, and selects module permissions. After submission, the system validates details and creates the account with mapped access rights. This flow helps onboard staff admins without giving unnecessary permissions. It ensures secure and structured expansion of the admin team.
 
 ![Create Admin Modal](assets/Screenshot%202026-03-23%20210711.png)
+
+---
+
+## RIDER APP SCREENSHOTS
+
+### Rider Home Dashboard
+**Details:** This screen is the rider app home dashboard where the rider controls online and offline availability. It shows location status, map integration state, quick statistics such as daily earnings and completed orders, and a recent activity section. The screen acts as the central operational page for starting and managing daily delivery activity.
+
+![Rider Home Dashboard](assets/Screenshot_20260329_180351.png)
+
+### Rider Order History
+**Details:** This page shows completed and historical deliveries for the rider. It includes order count, total earned amount, and filter tabs such as all-time, today, and this week. The section is used to review past trips and track personal delivery performance over time.
+
+![Rider Order History](assets/Screenshot_20260329_180250.png)
+
+### Rider Earnings & Payouts
+**Details:** This screen is dedicated to rider finance tracking. It displays total balance, withdrawable amount, earned and withdrawn summaries, filter controls, and transaction history. The Withdraw Funds action is provided here to manage payout flow and earnings visibility.
+
+![Rider Earnings & Payouts](assets/Screenshot_20260329_180236.png)
+
+### Rider Support Chat
+**Details:** This page connects riders directly with admin support through in-app chat. Riders can start a new conversation, send issue details, and track support interaction status. It improves operational support quality by centralizing communication inside the app.
+
+![Rider Support Chat](assets/Screenshot_20260329_180124.png)
+
+### Rider Notifications Center
+**Details:** This section displays rider alerts such as KYC updates, order notifications, and operational announcements. It supports read and unread tabs, helping riders quickly identify important messages. This module ensures timely communication for critical updates and actions.
+
+![Rider Notifications Center](assets/Screenshot_20260329_180429.png)
+
+### Rider Profile & Account
+**Details:** This profile screen contains rider identity, verification status, rating, delivery stats, account links, and banking details. Riders can review document status, order history shortcuts, and payout-related details from one place. It serves as the account management hub for rider information and settings.
+
+![Rider Profile & Account](assets/Screenshot_20260329_180316.png)
 
 ---
 
